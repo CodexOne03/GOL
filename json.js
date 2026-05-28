@@ -14,24 +14,39 @@ let timer; //Frames
 let fps = 30; //Frames per second
 let deltaTime = 1000 / fps; //Time between last and current frame
 let time = 0; //Program's current life time
-
-let grid = new Array(Math.trunc(table.height / offset));
-for (var i = 0; i < grid.length; i++)
+let grid;
+fetch("https://raw.githubusercontent.com/CodexOne03/GOL/refs/heads/main/Blinker.json").then((res) => res.text()).then((text) =>
 {
-	grid[i] = new Array(Math.trunc(table.width / offset));
-	for (let j = 0; j < grid[i].length; j++)
+	console.log(text);
+	let template = JSON.parse(text);
+	table.width = template.gridWidth * offset;
+	table.height = template.gridHeight * offset;
+	grid = new Array(Math.trunc(table.height / offset));
+	for (var i = 0; i < grid.length; i++)
 	{
-		grid[i][j] = false;
+		grid[i] = new Array(Math.trunc(table.width / offset));
+		for (let j = 0; j < grid[i].length; j++)
+		{
+			grid[i][j] = false;
+		}
 	}
-}
-grid[44][40] = true;
+	for (let i = 0; i < template.initialPattern.length; i++)
+	{
+		let x = template.initialPattern[i].x;
+		let y = template.initialPattern[i].y;
+		let alive = template.initialPattern[i].alive;
+		grid[y][x] = alive;
+	}
+}).catch((e) => console.error(e));
+
+/*grid[44][40] = true;
 grid[44][41] = true;
 grid[43][41] = true;
 grid[42][41] = true;
 grid[42][42] = true;
 grid[41][42] = true;
 grid[41][43] = true;
-draw();
+draw();*/
 function start()
 {
 	timer = setInterval(function() { deltaTime = performance.now() - time; time = performance.now(); draw(); updateGrid(); }, 1000 / fps);/*
@@ -200,4 +215,3 @@ function between(n, a, b)
 {
 	return (n >= a && n <= b);
 }
-

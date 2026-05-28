@@ -1,0 +1,11 @@
+{
+	"name": "Small Conway's Game - Blinker Pattern",
+	"description": "7x7 grid with a simple blinker pattern in the center",
+	"gridWidth": 7,
+	"gridHeight": 7,
+	"initialPattern": [
+		{"x": 3, "y": 2, "alive": true},
+		{"x": 3, "y": 3, "alive": true},
+		{"x": 3, "y": 4, "alive": true}
+	]
+}

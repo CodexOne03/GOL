@@ -15,10 +15,11 @@ let fps = 30; //Frames per second
 let deltaTime = 1000 / fps; //Time between last and current frame
 let time = 0; //Program's current life time
 let grid;
-fetch("https://raw.githubusercontent.com/CodexOne03/GOL/refs/heads/main/Blinker.json").then((res) => res.text()).then((text) =>
+fetch("https://raw.githubusercontent.com/CodexOne03/GOL/refs/heads/main/Templates.json").then((res) => res.text()).then((text) =>
 {
 	console.log(text);
-	let template = JSON.parse(text);
+	let templates = JSON.parse(text);
+	let template = templates[0];
 	table.width = template.gridWidth * offset;
 	table.height = template.gridHeight * offset;
 	grid = new Array(Math.trunc(table.height / offset));

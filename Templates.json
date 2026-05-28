@@ -1,0 +1,91 @@
+[
+  {
+    "name": "Conway's Game - Glider",
+    "description": "A small pattern that travels diagonally across the grid.",
+    "gridWidth": 100,
+    "gridHeight": 100,
+    "initialPattern": [
+      { "x": 40, "y": 40, "alive": true },
+      { "x": 41, "y": 41, "alive": true },
+      { "x": 39, "y": 42, "alive": true },
+      { "x": 40, "y": 42, "alive": true },
+      { "x": 41, "y": 42, "alive": true }
+    ]
+  },
+  {
+    "name": "Conway's Game - Blinker",
+    "description": "A simple oscillator that flips between horizontal and vertical states.",
+    "gridWidth": 100,
+    "gridHeight": 100,
+    "initialPattern": [
+      { "x": 49, "y": 50, "alive": true },
+      { "x": 50, "y": 50, "alive": true },
+      { "x": 51, "y": 50, "alive": true }
+    ]
+  },
+  {
+    "name": "Conway's Game - Toad",
+    "description": "A period-2 oscillator made from two offset rows of three cells.",
+    "gridWidth": 100,
+    "gridHeight": 100,
+    "initialPattern": [
+      { "x": 49, "y": 49, "alive": true },
+      { "x": 50, "y": 49, "alive": true },
+      { "x": 51, "y": 49, "alive": true },
+      { "x": 48, "y": 50, "alive": true },
+      { "x": 49, "y": 50, "alive": true },
+      { "x": 50, "y": 50, "alive": true }
+    ]
+  },
+  {
+    "name": "Conway's Game - Beacon",
+    "description": "A compact oscillator made from two diagonal 2x2 blocks.",
+    "gridWidth": 100,
+    "gridHeight": 100,
+    "initialPattern": [
+      { "x": 48, "y": 48, "alive": true },
+      { "x": 49, "y": 48, "alive": true },
+      { "x": 48, "y": 49, "alive": true },
+      { "x": 51, "y": 50, "alive": true },
+      { "x": 50, "y": 51, "alive": true },
+      { "x": 51, "y": 51, "alive": true }
+    ]
+  },
+  {
+    "name": "Conway's Game - Lightweight Spaceship",
+    "description": "A classic moving spaceship pattern.",
+    "gridWidth": 100,
+    "gridHeight": 100,
+    "initialPattern": [
+      { "x": 40, "y": 40, "alive": true },
+      { "x": 43, "y": 40, "alive": true },
+      { "x": 44, "y": 41, "alive": true },
+      { "x": 40, "y": 42, "alive": true },
+      { "x": 44, "y": 42, "alive": true },
+      { "x": 41, "y": 43, "alive": true },
+      { "x": 42, "y": 43, "alive": true },
+      { "x": 43, "y": 43, "alive": true },
+      { "x": 44, "y": 43, "alive": true }
+    ]
+  },
+  {
+    "name": "Conway's Game - Pentadecathlon",
+    "description": "A larger period-15 oscillator.",
+    "gridWidth": 100,
+    "gridHeight": 100,
+    "initialPattern": [
+      { "x": 50, "y": 44, "alive": true },
+      { "x": 50, "y": 45, "alive": true },
+      { "x": 49, "y": 46, "alive": true },
+      { "x": 51, "y": 46, "alive": true },
+      { "x": 50, "y": 47, "alive": true },
+      { "x": 50, "y": 48, "alive": true },
+      { "x": 50, "y": 49, "alive": true },
+      { "x": 50, "y": 50, "alive": true },
+      { "x": 49, "y": 51, "alive": true },
+      { "x": 51, "y": 51, "alive": true },
+      { "x": 50, "y": 52, "alive": true },
+      { "x": 50, "y": 53, "alive": true }
+    ]
+  }
+]
